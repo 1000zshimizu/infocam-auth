@@ -1,0 +1,20 @@
+<!doctype html>
+<html lang="ja">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="referrer" content="no-referrer">
+<title>InfoCam ログイン</title>
+</head>
+<body>
+<p>InfoCam に戻っています…</p>
+<p><a id="back" href="#">戻らないときはここを押してください</a></p>
+<script>
+  // Box のログイン後にここへ戻され、?code=...&state=... を InfoCam（infocam://）へそのまま渡す。
+  // 何も保存・送信しない。
+  var target = "infocam://boxauth" + window.location.search;
+  document.getElementById("back").href = target;
+  window.location.replace(target);
+</script>
+</body>
+</html>
